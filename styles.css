@@ -4,10 +4,17 @@
 
   .col {
     flex: 1;
-    border-color: red;
 }
 
 .square {
+    height: 50px;
+    width: 50px;
+    border: 15px solid green;
+    padding: 5px;
+    margin: 10px;
+}
+
+.test-square {
     height: 50px;
     width: 50px;
     border: 15px solid green;

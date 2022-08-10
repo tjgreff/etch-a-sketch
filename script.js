@@ -10,9 +10,19 @@ let createGrid = (num) => {
         for (let c = 0; c < num; c++) {
             let square = document.createElement("div");
             square.classList.add("square");
+            square.setAttribute("id","squareId");
             row.appendChild(square);
         }
     }
 }
 
-createGrid(5);
+createGrid(16);
+
+document.addEventListener("mouseover", function( event ) {
+  console.log("Mouse Over works!");
+  event.target.style.borderColor = "blue";
+} , false);
+
+document.addEventListener("mouseout", function( event ) {
+    event.target.style.borderColor = "green";
+  } , false);
