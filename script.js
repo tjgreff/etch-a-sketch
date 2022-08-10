@@ -16,13 +16,13 @@ let createGrid = (num) => {
     }
 }
 
-createGrid(16);
 
-document.addEventListener("mouseover", function( event ) {
-  console.log("Mouse Over works!");
+// createGrid(num);
+
+mainDiv.addEventListener("mouseover", function( event ) {
   event.target.style.borderColor = "blue";
 } , false);
 
-document.addEventListener("mouseout", function( event ) {
-    event.target.style.borderColor = "green";
+mainDiv.addEventListener("mouseout", function( event ) {
+    event.target.style.borderColor = "green"; 
   } , false);

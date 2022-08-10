@@ -8,8 +8,10 @@
 </head>
 
 <body>
-    <p id= "test" class="test-square"></p>
-    <p>===============================================</p>
+    <!-- User Input to Create Grid -->
+    <input type="number" id="gridSize" class="grid-input" min="1" max="10">
+    <button onclick="createGrid(document.getElementById('gridSize').value)">Create Grid</button>
+
     <div id="main-container" class="flex-grid">
         <!-- Insert Grid Here via script.js -->
     </div>
