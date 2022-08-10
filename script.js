@@ -1,10 +1,15 @@
-const mainDiv = document.getElementById("main-container");
+const div = document.getElementById("container");
 
 let createGrid = (num) => {
+    // clear mainDiv content
+    while(div.firstChild){
+        div.removeChild(div.firstChild);
+    }
+
     // create rows
     for (let r = 0; r < num; r++) {
         let row = document.createElement("div");
-        mainDiv.appendChild(row);
+        div.appendChild(row);
 
         // create squares as columns
         for (let c = 0; c < num; c++) {
@@ -16,13 +21,10 @@ let createGrid = (num) => {
     }
 }
 
-
-// createGrid(num);
-
-mainDiv.addEventListener("mouseover", function( event ) {
+div.addEventListener("mouseover", function( event ) {
   event.target.style.borderColor = "blue";
 } , false);
 
-mainDiv.addEventListener("mouseout", function( event ) {
+div.addEventListener("mouseout", function( event ) {
     event.target.style.borderColor = "green"; 
   } , false);
